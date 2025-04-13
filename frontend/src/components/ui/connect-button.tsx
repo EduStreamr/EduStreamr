@@ -36,6 +36,10 @@ export const ConnectButton = () => {
       chain={thirdwebEduchainTestnet}
       onConnect={() => reconnect()}
       onDisconnect={() => disconnect()}
+      connectModal={{
+        privacyPolicyUrl: "https://docs.edustreamr.xyz/privacy-policy",
+        termsOfServiceUrl: "https://docs.edustreamr.xyz/terms-of-service",
+      }}
     />
   );
 };
