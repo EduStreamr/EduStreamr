@@ -1,5 +1,5 @@
 ---
-id: terms
+id: terms-of-service
 title: Terms of Service
 sidebar_position: 4
 ---
@@ -25,7 +25,6 @@ EduStreamr is a platform designed for educational content creators to receive cr
 - EduStreamr provides a platform for educational content creators to receive cryptocurrency tips during live streams.
 - You agree to use the platform only for its intended purposes and in compliance with these Terms of Service.
 - You are responsible for maintaining the security of your account credentials.
-- We reserve the right to modify, suspend, or discontinue any aspect of the platform at any time without prior notice.
 - You acknowledge that your use of the platform is at your own risk and discretion.
 
 ### 3. Prohibited Activities
@@ -51,23 +50,24 @@ Violation of these prohibitions may result in potential legal action.
 
 #### 1. **Cryptocurrency Transactions**
 
-   - All payments and tips on EduStreamr are processed using cryptocurrency.
-   - You acknowledge that cryptocurrency transactions are irreversible once confirmed on the blockchain.
-   - We are not responsible for any losses due to user error, such as sending to incorrect addresses.
-   - Transaction times depend on blockchain network conditions and may vary.
-   - You are responsible for ensuring you have sufficient funds to cover transaction fees.
+- All payments and tips on EduStreamr are processed using cryptocurrency.
+- You acknowledge that cryptocurrency transactions are irreversible once confirmed on the blockchain.
+- We are not responsible for any losses due to user error, such as sending to incorrect addresses.
+- Transaction times depend on blockchain network conditions and may vary.
+- You are responsible for ensuring you have sufficient funds to cover transaction fees.
 
 #### 2. **Platform Fees**
 
-   - EduStreamr charges a platform fee of 2-5% on tips received through the platform.
-   - We reserve the right to modify our fee structure with appropriate notice to users.
-   - All fees are automatically deducted from transactions at the time they occur.
+- EduStreamr charges a platform fee of 2-5% on tips received through the platform.
+- We reserve the right to modify our fee structure with appropriate notice to users.
+- All fees are automatically deducted from transactions at the time they occur.
 
 #### 3. **Tax Obligations**
-   - You are solely responsible for determining what, if any, taxes apply to your transactions on EduStreamr.
-   - We do not provide tax advice or calculate tax liabilities for users.
-   - We may be required to report certain transaction information to tax authorities.
-   - You agree to comply with all applicable tax laws and regulations in your jurisdiction.
+
+- You are solely responsible for determining what, if any, taxes apply to your transactions on EduStreamr.
+- We do not provide tax advice or calculate tax liabilities for users.
+- We may be required to report certain transaction information to tax authorities.
+- You agree to comply with all applicable tax laws and regulations in your jurisdiction.
 
 ### 5. Disclaimer
 
@@ -87,10 +87,24 @@ Violation of these prohibitions may result in potential legal action.
 - WE ARE NOT LIABLE FOR ANY BUGS, VIRUSES, OR OTHER HARMFUL CODE THAT MAY BE TRANSMITTED THROUGH THE PLATFORM.
 - THESE LIMITATIONS APPLY EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-### 7. Changes to Terms of Service
+### 7. Modifications
+
+#### 1. **Modification of Terms**
 
 - We reserve the right to modify these Terms of Service at any time at our sole discretion.
 - Your continued use of the platform after such modifications constitutes your acceptance of the updated Terms of Service.
 - If you do not agree with the modified terms, you must stop using the platform.
 - It is your responsibility to review these Terms of Service periodically for changes.
 - The most current version will always be available on the EduStreamr website.
+
+#### 2. **Modification of Platform**
+
+- We reserve the right to modify, suspend, or discontinue any aspect of the platform at any time without prior notice.
+- We may make changes to the platform for various reasons, including but not limited to technical adjustments, security updates, compliance with legal requirements, or improvements to user experience.
+- While we strive to provide advance notice of significant changes, we are not obligated to do so, and some changes may be implemented immediately without prior notification.
+- In case of planned maintenance or significant updates that may affect platform availability, we will attempt to provide reasonable notice through our official communication channels.
+- You acknowledge that temporary interruptions of the service may occur during updates or maintenance periods.
+- We are not liable for any loss, damage, or inconvenience caused by platform modifications or temporary unavailability.
+- If a platform modification materially affects your ability to access or use the service, your sole remedy is to discontinue using the platform.
+- Any data or content you have submitted to the platform may not be recoverable after a modification or termination of the service.
+- Upon termination of the platform, we will make reasonable efforts to allow users to withdraw their funds within a specified timeframe, but we cannot guarantee that this will always be possible due to technical or regulatory constraints.
