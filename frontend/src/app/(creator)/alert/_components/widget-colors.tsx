@@ -89,9 +89,9 @@ export const WidgetColors = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Widget colors</CardTitle>
+        <CardTitle>Alert colors</CardTitle>
         <CardDescription>
-          Change widget colors based on your preference. This action requires a
+          Change alert colors based on your preference. This action requires a
           small transaction fee (~0.0001 EDU).
         </CardDescription>
       </CardHeader>
