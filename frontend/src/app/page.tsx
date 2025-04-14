@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { ProductHunt } from "./_components/product-hunt";
 
 const opportunities = [
   {
@@ -64,12 +65,14 @@ export default function Page() {
         </div>
 
         <div className="flex flex-col gap-6 items-center pb-36 px-6 text-center w-full">
-          <h1 className="text-5xl sm:text-7xl font-bold lg:line-clamp-2 leading-tight my-24 w-full sm:max-w-5xl">
-            Unlock Web3 Monetization with{" "}
+          <h1 className="text-5xl sm:text-7xl font-bold lg:line-clamp-2 leading-tight mt-24 w-full sm:max-w-5xl">
+            <span>Unlock Web3 Monetization with </span>
             <span className="text-main">EduStreamr</span>
           </h1>
+          <ProductHunt className="mb-12" />
           <p className="max-w-xl leading-loose">
-          A decentralized tipping platform for streamers that offers instant payouts and super low fees, all powered by blockchain.
+            A decentralized tipping platform for streamers that offers instant
+            payouts and super low fees, all powered by blockchain.
           </p>
           <Link href="/dashboard">
             <Button className="flex gap-2 text-base">
