@@ -5,7 +5,11 @@ import { educhainTestnet } from "./constants";
 
 export const config = createConfig({
   chains: [educhainTestnet],
-  connectors: [inAppWalletConnector({ client })],
+  connectors: [
+    inAppWalletConnector({
+      client,
+    }),
+  ],
   transports: {
     [educhainTestnet.id]: webSocket(
       "wss://ws.open-campus-codex.gelato.digital",

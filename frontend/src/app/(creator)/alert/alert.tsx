@@ -35,13 +35,6 @@ export default function Alert({ baseUrl }: { baseUrl: string }) {
 
   const fullUrl = `${baseUrl}/alert/${username}`;
 
-  const duration =
-    durationResult.status === "success"
-      ? durationResult.duration
-      : durationResult.status === "error"
-      ? 5
-      : undefined;
-
   const contractAddress =
     creatorInfoResult.status === "success"
       ? creatorInfoResult.contractAddress
@@ -52,21 +45,10 @@ export default function Alert({ baseUrl }: { baseUrl: string }) {
       <div className="font-bold block sm:hidden">Alert</div>
       <div className="w-full flex flex-col md:flex-row gap-4">
         <AlertUrl fullUrl={fullUrl} username={username} />
-        <TestTip />
+        <TestTip creatorInfo={creatorInfoResult} />
       </div>
-      {duration && (
-        <Duration
-          currentDuration={duration}
-          contractAddress={contractAddress}
-        />
-      )}
-      {creatorInfoResult.status === "success" &&
-        colorsResult.status === "success" && (
-          <WidgetColors
-            contractAddress={creatorInfoResult.contractAddress}
-            colors={colorsResult.colors}
-          />
-        )}
+      <Duration duration={durationResult} contractAddress={contractAddress} />
+      <WidgetColors colors={colorsResult} contractAddress={contractAddress} />
     </div>
   );
 }

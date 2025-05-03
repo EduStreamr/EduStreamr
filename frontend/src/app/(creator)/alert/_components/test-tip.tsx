@@ -7,32 +7,34 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useGetCreatorInfoByAddress } from "@/hooks/use-get-creator-info-by-address";
+import { UseGetCreatorInfoReturnType } from "@/hooks/use-get-creator-info";
 import { useTxHash } from "@/hooks/use-tx-hash";
 import { config } from "@/wagmi";
 import { waitForTransactionReceipt } from "@wagmi/core";
-import { Loader2, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { BaseError, useAccount, useWriteContract } from "wagmi";
+import { BaseError, useWriteContract } from "wagmi";
 import { TxButton } from "../../_components/tx-button";
+import { LoadingCard } from "../../_components/loading-card";
+import { RegisterCard } from "../../_components/register-card";
 
-export const TestTip = () => {
+export const TestTip = ({
+  creatorInfo,
+}: {
+  creatorInfo: UseGetCreatorInfoReturnType;
+}) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const { txHash, setTxHashWithTimeout } = useTxHash();
 
-  const accountResult = useAccount();
-
-  const creatorInfoResult = useGetCreatorInfoByAddress(accountResult.address);
-
   const { writeContract } = useWriteContract();
 
-  if (
-    creatorInfoResult.status === "pending" ||
-    creatorInfoResult.status === "error"
-  )
-    return null;
+  if (creatorInfo.status === "pending")
+    return <LoadingCard title="Send Test Tip" />;
+
+  if (creatorInfo.status === "error")
+    return <RegisterCard title="Send Test Tip" />;
 
   const handleTestTip = () => {
     setIsLoading(true);
@@ -40,7 +42,7 @@ export const TestTip = () => {
     writeContract(
       {
         abi: EduStreamrAbi,
-        address: creatorInfoResult.contractAddress,
+        address: creatorInfo.contractAddress,
         functionName: "sendTestTip",
       },
       {
@@ -56,14 +58,14 @@ export const TestTip = () => {
         onError: (error) => {
           toast.error(
             (error as BaseError).details ||
-              "Failed to send test tip. See console for detailed error."
+              "Failed to send test tip. See console for detailed error.",
           );
 
           console.error(error.message);
 
           setIsLoading(false);
         },
-      }
+      },
     );
   };
 

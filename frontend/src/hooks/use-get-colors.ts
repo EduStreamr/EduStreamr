@@ -11,7 +11,7 @@ interface SuccessReturnType {
   };
 }
 
-type UseGetColorsReturnType =
+export type UseGetColorsReturnType =
   | SuccessReturnType
   | ErrorReturnType
   | PendingReturnType;

@@ -17,7 +17,7 @@
         --bg: #070707;
         --bw: #fff; /* white and secondary black e.g. utility class variant would be: bg-[#fff] dark:bg-[#212121] */
         --blank: #000; /* blank black and white */
-        --border: #000;
+        --border: #000; /* 0f8ec9 */
         --text: #000;
         --mtext: #000; /* text that is placed on background with main color e.g. text color of default button */
         --ring: #000;

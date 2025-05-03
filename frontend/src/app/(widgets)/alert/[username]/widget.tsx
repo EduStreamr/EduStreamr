@@ -1,19 +1,19 @@
 "use client";
 
 import { EduStreamrAbi } from "@/abi/EduStreamr";
-import { useGetCreatorInfoByUsername } from "@/hooks/use-get-creator-info-by-username";
-import { useEffect, useState } from "react";
-import { formatEther, isAddress, zeroAddress } from "viem";
-import { useClient, useWatchContractEvent } from "wagmi";
-import useSound from "use-sound";
 import { UniversalEduStreamrAbi } from "@/abi/UniversalEduStreamr";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { UniversalEduStreamrAddress } from "@/constants";
 import { useGetColors } from "@/hooks/use-get-colors";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useGetCreatorInfoByUsername } from "@/hooks/use-get-creator-info-by-username";
 import { useGetDuration } from "@/hooks/use-get-duration";
 import { useIsRegistered } from "@/hooks/use-is-registered";
-import { getBlockNumber } from "@wagmi/core";
 import { config } from "@/wagmi";
+import { getBlockNumber } from "@wagmi/core";
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
+import { formatEther, isAddress, zeroAddress } from "viem";
+import { useWatchContractEvent } from "wagmi";
 
 interface Message {
   senderAddress: string;
@@ -30,7 +30,7 @@ export default function Widget({ username }: { username: string }) {
   const [isError, setIsError] = useState<boolean>(false);
 
   const isRegisteredResult = useIsRegistered(
-    isAddress(username) ? username : undefined
+    isAddress(username) ? username : undefined,
   );
 
   const colorsResult = useGetColors({
@@ -47,6 +47,10 @@ export default function Widget({ username }: { username: string }) {
     const heartbeat = async () => {
       try {
         await getBlockNumber(config);
+
+        if (isError) {
+          window.location.reload();
+        }
       } catch (error) {
         console.error(error);
       }
@@ -57,7 +61,7 @@ export default function Widget({ username }: { username: string }) {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [isError]);
 
   useWatchContractEvent({
     abi: UniversalEduStreamrAbi,
@@ -67,7 +71,7 @@ export default function Widget({ username }: { username: string }) {
       recipientAddress: isAddress(username) ? username : zeroAddress,
     },
     onError: (error) => {
-      setIsError(false);
+      setIsError(true);
       console.error(error);
     },
     onLogs: (logs) => {

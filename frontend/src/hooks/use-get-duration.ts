@@ -7,7 +7,7 @@ interface SuccessReturnType {
   duration: number;
 }
 
-type UseGetDurationReturnType =
+export type UseGetDurationReturnType =
   | SuccessReturnType
   | ErrorReturnType
   | PendingReturnType;

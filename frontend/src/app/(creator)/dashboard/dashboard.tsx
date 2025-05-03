@@ -160,9 +160,8 @@ export default function Dashboard({ baseUrl }: { baseUrl: string }) {
                   contractBalanceResult.data.symbol
                 }`}
               {isRegisteredResult.isSuccess && !isRegisteredResult.data && (
-                <span className="text-sm italic">
-                  For accounts that do not have a username, tips are sent
-                  directly to the wallet address.
+                <span>
+                  0 EDU
                 </span>
               )}
             </div>
